@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream.in - Game Of Thrones</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/icon.png">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+        crossorigin="anonymous"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@700&display=swap" 
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body class="home-page">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xxl bg-black navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="./index.html"><img src="./assets/images/logo2.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./tv-shows.html">TV Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="./movie.html">Movie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modalContactUs">Contact Us</a>
+          </li>
+        </ul>
+        <div class="d-flex justify-content-center align-items-center gap-5">
+          <form class="d-flex form justify-content-center align-items-center bg-dark" role="search">
+            <input class="form-control bg-dark me-2 text-white" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn-search" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <div class="btn-navbar d-flex justify-content-center align-items-center gap-4">
+            <a href="./signup.html"><button type="button" class="btn btn-outline-primary">Sign Up</button></a>
+            <a href="./signin.html"><button type="button" class="btn btn-primary">Sign In</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="body-breadcrumb">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb d-flex align-items-center">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Game of Thrones</li>
+        </ol>
+    </nav>
+  </div>
+  <div class="body-content">
+    <div class="container-streaming">
+      <div class="streaming-img">
+        <img class="w-100" src="./assets/images/img-streaming.png" alt="">
+      </div>
+      <div class="streaming-title">
+        <h3>Game of Thrones</h3>
+      </div>
+      <div class="d-flex align-items-center gap-4">
+        <div class="streaming-genre d-flex align-items-center gap-1">
+          <span>Action,</span>
+          <span>Adventure,</span>
+          <span>Drama</span>
+        </div>
+        <div class="streaming-year d-flex align-items-center gap-2">
+          <img src="./assets/images/titik.png" alt="">
+          <span>2019</span>
+        </div>
+        <div class="streaming-rating d-flex align-items-center gap-2">
+          <img src="./assets/images/rating.png" alt="">
+          <span>9.7</span>
+        </div>
+        
+      </div>
+      <div class="streaming-synopsis">
+        <p>Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.</p>
+      </div> 
+      <div class="streaming-creators">
+        <span>Creators : Lauren Schmidt</span>
+      </div> 
+    </div>
+    <div class="container-season">
+      <!-- button genre -->
+      <nav class="navbar navbar-expand-lg navbar-dark select-genre">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#selectGenre" aria-controls="selectGenre" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="selectGenre">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+              <li class="nav-item select-genre-all">
+                <a class="nav-link" aria-current="page" href="#">Season 1</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Season 2</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Season 3</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Season 4</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Season 5</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Season 6</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Season 7</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Season 8</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Button Genre -->
+      <div class="season-content">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-2">
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode1.png" alt="img-episode1">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 1:</span> Winter Is Coming</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>8.9</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode2.png" alt="img-episode2">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 2:</span> The Kingsroad</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>8.6</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>While Bran recovers from his fall, Ned takes only his daughters to King's Landing. 
+                  Jon Snow goes with his uncle Benjen to the Wall. Tyrion joins them.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode3.png" alt="img-episode3">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 3:</span> Lord Snow</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>8.5</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode4.png" alt="img-episode4">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 4:</span> Cripples, Bastards and Broken Things</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>8.6</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode5.png" alt="img-episode5">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 5:</span> The Wolf and The Lion</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>9.0</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode6.png" alt="img-episode6">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 6:</span> A Golden Crown</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>8.6</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode7.png" alt="img-episode7">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 7:</span> You Win or You Die</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>9.1</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode8.png" alt="img-episode8">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 8:</span> The Pointy End</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>8.9</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode9.png" alt="img-episode9">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 9:</span> Baelor</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>9.6</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-4">
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="season-img col-md d-flex justify-content-center">
+                  <img class="w-100" src="./assets/images/img-episode10.png" alt="img-episode10">
+                </div>
+              </div>
+              <div class="col">
+                <div class="season-title">
+                  <h6 class="season-title-text"><span>Episode 10:</span> Fire and Blood</h6>
+                </div>
+                <div class="season-spec">
+                  <img class="season-rating" src="./assets/images/rating.png" alt="">
+                  <span>9.4</span>
+                  <img class="season-titik" src="./assets/images/titik.png" alt="">
+                  <span>49 Minutes 50 Seconds</span>
+                </div>
+                <div class="season-synopsis">
+                  <p>Eddard Stark is torn between his family and an old friend when asked to serve at the side of King Robert Baratheon; 
+                  Viserys plans to wed his sister to a nomadic warlord in exchange for an army.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-reviews">
+      <div class="reviews-title d-flex align-items-center gap-3">
+        <h4>Reviews</h4>
+        <div class="reviews-ratings d-flex align-items-center gap-2">
+          <img src="./assets/images/rating.png" alt="">
+          <span>5.0 (1099 reviews)</span>                         
+        </div>
+      </div>
+      <div class="reviews-content">
+        <div class="reviews-people">
+          <div class="row">
+            <div class="col-1 img-people d-flex justify-content-center align-items-center">
+              <img src="./assets/images/img-reviews1.png" alt="">
+            </div>
+            <div class="col reviews-content-name">
+              <h6>Veronica Romansha</h6>
+              <div class="d-flex align-items-center gap-3">
+                <div class="content-ratings-img ">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                </div>
+                <div class="content-ratings-value">
+                  <span>(5.0 / 5.0)</span>
+                </div>
+              </div>
+              <div class="reviews-message">
+                <p>It was big surprisingly and unpredictable who is the main character here. The movie was made my mind crazy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-content">
+        <div class="reviews-people">
+          <div class="row">
+            <div class="col-1 img-people d-flex justify-content-center align-items-center">
+              <img src="./assets/images/img-reviews2.png" alt="">
+            </div>
+            <div class="col reviews-content-name">
+              <h6>Leonard Alfredo</h6>
+              <div class="d-flex align-items-center gap-3">
+                <div class="content-ratings-img ">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                </div>
+                <div class="content-ratings-value">
+                  <span>(5.0 / 5.0)</span>
+                </div>
+              </div>
+              <div class="reviews-message">
+                <p>The movie was feels like a roller coaster. There’re a lot of main characters. I’m so confused!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-content">
+        <div class="reviews-people">
+          <div class="row">
+            <div class="col-1 img-people d-flex justify-content-center align-items-center">
+              <img src="./assets/images/img-reviews3.png" alt="">
+            </div>
+            <div class="col reviews-content-name">
+              <h6>Emery Vaccaro</h6>
+              <div class="d-flex align-items-center gap-3">
+                <div class="content-ratings-img ">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating-dark.png" alt="">
+                </div>
+                <div class="content-ratings-value">
+                  <span>(5.0 / 5.0)</span>
+                </div>
+              </div>
+              <div class="reviews-message">
+                <p>I hate Lanniester Family. They were so cruel and politic player.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-content">
+        <div class="reviews-people">
+          <div class="row">
+            <div class="col-1 img-people d-flex justify-content-center align-items-center">
+              <img src="./assets/images/img-reviews4.png" alt="">
+            </div>
+            <div class="col reviews-content-name">
+              <h6>Allison Culhane</h6>
+              <div class="d-flex align-items-center gap-3">
+                <div class="content-ratings-img ">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating-dark.png" alt="">
+                </div>
+                <div class="content-ratings-value">
+                  <span>(5.0 / 5.0)</span>
+                </div>
+              </div>
+              <div class="reviews-message">
+                <p>I couldn’t imagine how become Arya Stark. She was a poor little girl.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-content">
+        <div class="reviews-people">
+          <div class="row">
+            <div class="col-1 img-people d-flex justify-content-center align-items-center">
+              <img src="./assets/images/img-reviews5.png" alt="">
+            </div>
+            <div class="col reviews-content-name">
+              <h6>Kierra Dias</h6>
+              <div class="d-flex align-items-center gap-3">
+                <div class="content-ratings-img ">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                </div>
+                <div class="content-ratings-value">
+                  <span>(5.0 / 5.0)</span>
+                </div>
+              </div>
+              <div class="reviews-message">
+                <p>Winter is coming!!!!!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-content">
+        <div class="reviews-people">
+          <div class="row">
+            <div class="col-1 img-people d-flex justify-content-center align-items-center">
+              <img src="./assets/images/img-reviews6.png" alt="">
+            </div>
+            <div class="col reviews-content-name">
+              <h6>Madelyn Curtis</h6>
+              <div class="d-flex align-items-center gap-3">
+                <div class="content-ratings-img ">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                  <img src="./assets/images/rating.png" alt="">
+                </div>
+                <div class="content-ratings-value">
+                  <span>(5.0 / 5.0)</span>
+                </div>
+              </div>
+              <div class="reviews-message">
+                <p>Jon Snow I love youuuu!!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-black text-muted">
+    <div class="body-footer">
+      <div class="container-fluid text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="footer-content col-md-3 col-lg-4 col-xl-3 mb-4">
+            <h6 class="fw-bold mb-4"><img src="./assets/images/logo2.png" alt=""></h6>
+            <p>Streaming movie with best <br> experience.</p>
+          </div>
+          <div class="menu-footer col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="fw-bold mb-4 text-white">Menu</h6>
+            <p><a href="#!" class="text-white">TV Shows</a></p>
+            <p><a href="#!" class="text-white">Movie</a></p>
+            <p><a href="#!" class="text-white">MyList</a></p>
+            <p><a href="#!" class="text-white">Contact</a></p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <form action="">
+              <div class="row">
+                <div class="title-subscribe col-auto mb-4 mb-md-0">
+                  <h6>Join our newsletter</h6>
+                  <p class="pt-2">We’ll send you our schedule and more informations about movie.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5 col-12 mb-4">
+                  <div class="form-outline">
+                    <input type="email" id="form5Example25" class="form-control "/>
+                  </div>
+                </div>
+                <div class=" btn-subscribe col-auto mb-4">
+                  <button type="submit" class="btn mb-4">Subscribe</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="sosmed col-md-4 col-lg-3 col-xl-  mb-4">
+            <h6 class="fw-bold mb-4">Social media</h6>
+            <div class="d-flex gap-3">
+              <a href="#"><img src="./assets/images/ig.png" alt=""></a>
+              <a href="#"><img src="./assets/images/twitter.png" alt=""></a>
+              <a href="#"><img src="./assets/images/email2.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-4 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+      <span> © 2023 Copyright:</span>
+      <a class="text-reset fw-bold text-white" href="https://mdbootstrap.com/">Andri Anggoro</a>
+    </div>
+  </footer>
+  <!-- Footer -->
+  
+ 
+   
+  
+        
+</body>
+</html>

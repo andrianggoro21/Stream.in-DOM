@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream.in - Most Popular</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/icon.png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+            crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+            crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@700&display=swap" 
+            rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">   
+</head>
+<body class="home-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xxl bg-black navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="./index.html"><img src="./assets/images/logo2.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./tv-shows.html">TV Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./movie.html">Movie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modalContactUs">Contact Us</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center align-items-center gap-5">
+            <form class="d-flex form justify-content-center align-items-center bg-dark" role="search">
+              <input class="form-control bg-dark me-2 text-white" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn-search" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+            <div class="btn-navbar d-flex justify-content-center align-items-center gap-4">
+              <a href="./signup.html"><button type="button" class="btn btn-outline-primary">Sign Up</button></a>
+              <a href="./signin.html"><button type="button" class="btn btn-primary">Sign In</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <div class="body-breadcrumb">
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb align-items-center">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">TV-Shows</li>
+          </ol>
+        </nav>
+    </div>
+    <div class="body-content">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- button genre -->
+      <nav class="navbar navbar-expand-xl navbar-dark select-genre">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#selectGenre" aria-controls="selectGenre" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="selectGenre">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+              <li class="nav-item select-genre-all">
+                <a class="nav-link" aria-current="page" href="#">All</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Action</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Adventure</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Comedy</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Drama</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Horror</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Sci-Fi</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Thriller</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Button Genre -->
+      <!-- sort by & filter by -->
+       <div class="filter-sortby d-flex justify-content-center align-items-center gap-4">
+         <div class="sortby d-flex justify-content-center align-items-center">
+           <a class="d-flex gap-3 align-items-center" href="">
+             <img src="./assets/images/sortby.png" alt="">
+             <span>Sort by</span>
+             <img src="./assets/images/down.png" alt="">
+           </a>
+         </div>
+         <div class="filter d-flex justify-content-center align-items-center">
+            <a class="d-flex gap-3 align-items-center" href="">
+             <img src="./assets/images/filter.png" alt="">
+             <span>Filter by</span>
+             <img src="./assets/images/down.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- sort by & filter by -->
+      <!-- Most Popular -->
+      <div class="card-most-popular">
+        <div class="card-content d-flex justify-content-between">
+          <span class="card-content-text">Most Popular</span>
+        </div>
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-4 mb-4">
+          <div class="col body-card-content">
+            <div class="card">
+              <img src="./assets/images/img-tvshows1.png" class="card-img-top" alt="img-popular1">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Thelastofus">
+                <i class="bi bi-play-circle"></i>
+              </div>
+              <div class="card-body card-content-title">
+                <h6 class="card-title">The Last of Us</h6>
+                <h6 class="h6-genre">Action, Adventure, Drama</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col body-card-content">
+            <div class="card">
+              <img src="./assets/images/img-popular5.png" class="card-img-top" alt="img-popular2">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Thecrown">
+                <i class="bi bi-play-circle"></i>
+              </div>
+              <div class="card-body card-content-title">
+                <h6 class="card-title">The Crown</h6>
+                <h6 class="h6-genre">Biography, Drama, History</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col body-card-content">
+            <div class="card">
+              <img src="./assets/images/img-tvshows2.png" class="card-img-top" alt="img-popular3">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Peakyblinders">
+                <i class="bi bi-play-circle"></i>
+              </div>
+              <div class="card-body card-content-title">
+                <h6 class="card-title">Peaky Blinders</h6>
+                <h6 class="h6-genre">Crime, Drama</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col body-card-content">
+            <div class="card">
+              <img src="./assets/images/img-popular3.png" class="card-img-top" alt="img-popular4">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Kingdom">
+                <i class="bi bi-play-circle"></i>
+              </div>
+              <div class="card-body card-content-title">
+                <h6 class="card-title">Kingdom</h6>
+                <h6 class="h6-genre">Action, Drama, Horror</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col body-card-content">
+            <div class="card">
+              <img src="./assets/images/img-popular1.png" class="card-img-top" alt="img-popular5">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Gameofthrones">
+                <i class="bi bi-play-circle"></i>
+              </div>
+              <div class="card-body card-content-title">
+                <h6 class="card-title">Game of Thrones</h6>
+                <h6 class="h6-genre">Action, Adventure, Drama</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col body-card-content">
+            <div class="card">
+              <img src="./assets/images/img-popular2.png" class="card-img-top" alt="img-popular6">
+              <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Houseofthedragon">
+                <i class="bi bi-play-circle"></i>
+              </div>
+              <div class="card-body card-content-title">
+                <h6 class="card-title">House of The Dragon</h6>
+                <h6 class="h6-genre">Action, Adventure, Drama</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Most Popular -->
+
+      <!-- Modal Most Popular -->
+      <!-- Modal Content Game of thrones -->
+      <div class="modal fade" id="modal-Gameofthrones" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content detail-content">
+            <div class="modal-body detail-body">
+              <div class="row detail-row">
+                <div class="img-modal col-md d-flex justify-content-center">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/KPLWWIOCOOQ" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+                </div>
+                <div class="content-modal col-md">
+                  <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                    <h3 class="detail-title">Game of Thrones</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="content-genre d-flex gap-3">
+                    <span>Action</span>
+                    <span>Adventure</span>
+                    <span>Drama</span>
+                  </div>
+                  <div class="content-spec">
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>+18</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>2011</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>57 Minutes</span>
+                    <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                    <span>9.2</span>
+                  </div>
+                  <div class="content-synopsis">
+                    <p>Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.</p>
+                  </div>
+                  <div class="content-writers">
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Directors</span></div>
+                      <div class="column2 col-sm-9"><span>David Benioff, D.B. Weiss</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Writers</span></div>
+                      <div class="column2  col-sm-9"><span>Johannes Roberts, Ernest Riera</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Stars</span></div>
+                      <div class="column2  col-sm-9"><span>Emilia Clarke, Peter Dinklage, Kit Harington</span></div>
+                    </div>
+                  </div>
+                  <div class="modal-watch row d-flex gap-4">
+                    <div class="col-sm-7 d-flex gap-3">
+                      <img src="./assets/images/img-modal-add.png" alt="">
+                      <img src="./assets/images/img-modal-love.png" alt="">
+                      <img src="./assets/images/img-modal-share.png" alt="">
+                    </div>
+                    <div class="btn-watch col-sm">
+                      <a href="./streaming.html">
+                        <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                          <img src="./assets/images/btn-watch.png" alt="">
+                          <span>Watch Now</span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Content Game of Thrones -->
+      <!-- Modal Content House of The Dragon -->
+      <div class="modal fade" id="modal-Houseofthedragon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content detail-content">
+            <div class="modal-body detail-body">
+              <div class="row detail-row">
+                <div class="img-modal col-md d-flex justify-content-center">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/DotnJ7tTA34" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+                </div>
+                <div class="content-modal col-md">
+                  <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                    <h3 class="detail-title">House of The Dragon</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="content-genre d-flex gap-3">
+                    <span>Action</span>
+                    <span>Adventure</span>
+                    <span>Drama</span>
+                  </div>
+                  <div class="content-spec">
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>+13</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>2022</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>57 Minutes</span>
+                    <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                    <span>8.5</span>
+                  </div>
+                  <div class="content-synopsis">
+                    <p>An internal succession war within House Targaryen at the height of its power, 172 years before the birth of Daenerys Targaryen.</p>
+                  </div>
+                  <div class="content-writers">
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Directors</span></div>
+                      <div class="column2 col-sm-9"><span>Ryan J. Condal, George R.R. Martin</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Writers</span></div>
+                      <div class="column2  col-sm-9"><span>Johannes Roberts, Ernest Riera</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Stars</span></div>
+                      <div class="column2  col-sm-9"><span>Rhys Ifans, Matt Smith, Fabien Frankel</span></div>
+                    </div>
+                  </div>
+                  <div class="modal-watch row d-flex gap-4">
+                    <div class="col-sm-7 d-flex gap-3">
+                      <img src="./assets/images/img-modal-add.png" alt="">
+                      <img src="./assets/images/img-modal-love.png" alt="">
+                      <img src="./assets/images/img-modal-share.png" alt="">
+                    </div>
+                    <div class="btn-watch col-sm">
+                      <a href="./streaming.html">
+                        <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                          <img src="./assets/images/btn-watch.png" alt="">
+                          <span>Watch Now</span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Content Game of Thrones -->
+      <!-- Modal Content Kingdom -->
+      <div class="modal fade" id="modal-Kingdom" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content detail-content">
+            <div class="modal-body detail-body">
+              <div class="row detail-row">
+                <div class="img-modal col-md d-flex justify-content-center">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/4l-yByZpaaM" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+                </div>
+                <div class="content-modal col-md">
+                  <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                    <h3 class="detail-title">Kingdom</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="content-genre d-flex gap-3">
+                    <span>Action</span>
+                    <span>Drama</span>
+                    <span>Horror</span>
+                  </div>
+                  <div class="content-spec">
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>+18</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>2019</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>45 Minutes</span>
+                    <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                    <span>8.3</span>
+                  </div>
+                  <div class="content-synopsis">
+                    <p>While strange rumors about their ill King grip a kingdom, the crown prince becomes their only hope against a mysterious plague overtaking the land.</p>
+                  </div>
+                  <div class="content-writers">
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Directors</span></div>
+                      <div class="column2 col-sm-9"><span>Ryan J. Condal, George R.R. Martin</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Writers</span></div>
+                      <div class="column2  col-sm-9"><span>Johannes Roberts, Ernest Riera</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Stars</span></div>
+                      <div class="column2  col-sm-9"><span>Ju Ji-HoonBae DoonaKim Sungkyu</span></div>
+                    </div>
+                  </div>
+                  <div class="modal-watch row d-flex gap-4">
+                    <div class="col-sm-7 d-flex gap-3">
+                      <img src="./assets/images/img-modal-add.png" alt="">
+                      <img src="./assets/images/img-modal-love.png" alt="">
+                      <img src="./assets/images/img-modal-share.png" alt="">
+                    </div>
+                    <div class="btn-watch col-sm">
+                      <a href="./streaming.html">
+                        <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                          <img src="./assets/images/btn-watch.png" alt="">
+                          <span>Watch Now</span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Content Kingdom -->
+      <!-- Modal Content Eternals -->
+      <div class="modal fade" id="modal-Peakyblinders" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content detail-content">
+            <div class="modal-body detail-body">
+              <div class="row detail-row">
+                <div class="img-modal col-md d-flex justify-content-center">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Ruyl8_PT_y8" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+                </div>
+                <div class="content-modal col-md">
+                  <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                    <h3 class="detail-title">Peaky Blinders</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="content-genre d-flex gap-3">
+                    <span>Crime</span>
+                    <span>Drama</span>
+                  </div>
+                  <div class="content-spec">
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>2013</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>1 Hours</span>
+                    <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                    <span>8.8</span>
+                  </div>
+                  <div class="content-synopsis">
+                    <p>A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.</p>
+                  </div>
+                  <div class="content-writers">
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Directors</span></div>
+                      <div class="column2 col-sm-9"><span>Steven Knight</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Writers</span></div>
+                      <div class="column2  col-sm-9"><span>Chloé Zhao, Patrick Burleigh, Ryan Firpo</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Stars</span></div>
+                      <div class="column2  col-sm-9"><span>Cillian Murphy, Paul Anderson, Sophie Rundle</span></div>
+                    </div>
+                  </div>
+                  <div class="modal-watch row d-flex gap-4">
+                    <div class="col-sm-7 d-flex gap-3">
+                      <img src="./assets/images/img-modal-add.png" alt="">
+                      <img src="./assets/images/img-modal-love.png" alt="">
+                      <img src="./assets/images/img-modal-share.png" alt="">
+                    </div>
+                    <div class="btn-watch col-sm">
+                      <a href="./streaming.html">
+                        <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                          <img src="./assets/images/btn-watch.png" alt="">
+                          <span>Watch Now</span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Content Eternals -->
+      <!-- Modal Content Crown -->
+      <div class="modal fade" id="modal-Thecrown" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content detail-content">
+            <div class="modal-body detail-body">
+              <div class="row detail-row">
+                <div class="img-modal col-md d-flex justify-content-center">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/JWtnJjn6ng0" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+                </div>
+                <div class="content-modal col-md">
+                  <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                    <h3 class="detail-title">The Crown</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="content-genre d-flex gap-3">
+                    <span>Biography</span>
+                    <span>Drama</span>
+                    <span>History</span>
+                  </div>
+                  <div class="content-spec">
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>2016</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>58 Minutes</span>
+                    <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                    <span>8.6</span>
+                  </div>
+                  <div class="content-synopsis">
+                    <p>Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.</p>
+                  </div>
+                  <div class="content-writers">
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Directors</span></div>
+                      <div class="column2 col-sm-9"><span>Peter Morgan</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Writers</span></div>
+                      <div class="column2  col-sm-9"><span>Chloé Zhao, Patrick Burleigh, Ryan Firpo</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Stars</span></div>
+                      <div class="column2  col-sm-9"><span>Claire Foy, Olivia Colman, Imelda Staunton</span></div>
+                    </div>
+                  </div>
+                  <div class="modal-watch row d-flex gap-4">
+                    <div class="col-sm-7 d-flex gap-3">
+                      <img src="./assets/images/img-modal-add.png" alt="">
+                      <img src="./assets/images/img-modal-love.png" alt="">
+                      <img src="./assets/images/img-modal-share.png" alt="">
+                    </div>
+                    <div class="btn-watch col-sm">
+                      <a href="./streaming.html">
+                        <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                          <img src="./assets/images/btn-watch.png" alt="">
+                          <span>Watch Now</span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Content Crown -->
+      <!-- Modal Content The Last of Us -->
+      <div class="modal fade" id="modal-Thelastofus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content detail-content">
+            <div class="modal-body detail-body">
+              <div class="row detail-row">
+                <div class="img-modal col-md d-flex justify-content-center">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/uLtkt8BonwM" title="YouTube video player" 
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen></iframe>
+                </div>
+                <div class="content-modal col-md">
+                  <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                    <h3 class="detail-title">The Last of Us</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="content-genre d-flex gap-3">
+                    <span>Action</span>
+                    <span>Adventure</span>
+                    <span>Drama</span>
+                  </div>
+                  <div class="content-spec">
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>2023</span>
+                    <img src="./assets/images/titik.png" alt="point">
+                    <span>50 Minutes</span>
+                    <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                    <span>9.0</span>
+                  </div>
+                  <div class="content-synopsis">
+                    <p>After a global pandemic destroys civilization, a hardened survivor takes charge of a 14-year-old girl who may be humanity's last hope.</p>
+                  </div>
+                  <div class="content-writers">
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Directors</span></div>
+                      <div class="column2 col-sm-9"><span>Neil Druckmann</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Writers</span></div>
+                      <div class="column2  col-sm-9"><span>Craig Mazin</span></div>
+                    </div>
+                    <div class="row detail-row">
+                      <div class="column1 col-sm-3"><span>Stars</span></div>
+                      <div class="column2  col-sm-9"><span>Pedro Pascal, Bella Ramsey, Anna Torv</span></div>
+                    </div>
+                  </div>
+                  <div class="modal-watch row d-flex gap-4">
+                    <div class="col-sm-7 d-flex gap-3">
+                      <img src="./assets/images/img-modal-add.png" alt="">
+                      <img src="./assets/images/img-modal-love.png" alt="">
+                      <img src="./assets/images/img-modal-share.png" alt="">
+                    </div>
+                    <div class="btn-watch col-sm">
+                      <a href="./streaming.html">
+                        <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                          <img src="./assets/images/btn-watch.png" alt="">
+                          <span>Watch Now</span>
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Content Annabelle: Creation -->
+      <!-- Modal Most Popular --> 
+    </div>
+
+    <!-- Modal Contact Us -->
+    <div class="modal fade" id="modalContactUs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog contact-dialog modal-lg">
+        <div class="modal-content contact-content">
+          <div class="modal-header contact-header" data-bs-theme="dark">
+            <h1 class="modal-title contact-title fs-5" id="exampleModalLabel">Contact Us</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body contact-body">
+            <div class="modal-quote">
+              <p>Our friendly team would love to hear from you!</p>
+            </div>
+            <div class="row">
+              <div class="col-md">
+                <div class="mb-3 contact-data">
+                  <label for="exampleFormControlInput1" class="form-label contact-label">First Name</label>
+                  <input type="text" class="form-control contact-input" id="exampleFormControlInput1" placeholder="First Name">
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="mb-3 contact-data">
+                  <label for="exampleFormControlInput1" class="form-label contact-label">Last Name</label>
+                  <input type="text" class="form-control contact-input" id="exampleFormControlInput1" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 contact-data">
+              <label for="exampleFormControlInput1" class="form-label contact-label">Email Address</label>
+              <input type="email" class="form-control contact-input" id="exampleFormControlInput1" placeholder="Email Address">
+            </div>
+            <div class="mb-3 contact-data">
+              <label for="exampleFormControlInput1" class="form-label contact-label">Subject</label>
+              <input type="test" class="form-control contact-input" id="exampleFormControlInput1" placeholder="Subject">
+            </div>
+            <div class="mb-3 contact-data">
+              <label for="exampleFormControlTextarea1" class="form-label contact-label">Message</label>
+              <textarea class="form-control contact-textArea" id="exampleFormControlTextarea1" rows="6" placeholder="Enter Your Message"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer contact-footer" >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+            <button type="button" class="btn btn-primary">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Contact Us -->
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-black text-muted">
+      <div class="body-footer">
+        <div class="container-fluid text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="footer-content col-md-3 col-lg-4 col-xl-3 mb-4">
+              <h6 class="fw-bold mb-4"><img src="./assets/images/logo2.png" alt=""></h6>
+              <p>Streaming movie with best <br> experience.</p>
+            </div>
+            <div class="menu-footer col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="fw-bold mb-4 text-white">Menu</h6>
+              <p><a href="#!" class="text-white">TV Shows</a></p>
+              <p><a href="#!" class="text-white">Movie</a></p>
+              <p><a href="#!" class="text-white">MyList</a></p>
+              <p><a href="#!" class="text-white">Contact</a></p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <form action="">
+                <div class="row">
+                  <div class="title-subscribe col-auto mb-4 mb-md-0">
+                    <h6>Join our newsletter</h6>
+                    <p class="pt-2">We’ll send you our schedule and more informations about movie.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5 col-12 mb-4">
+                    <div class="form-outline">
+                      <input type="email" id="form5Example25" class="form-control "/>
+                    </div>
+                  </div>
+                  <div class=" btn-subscribe col-auto mb-4">
+                    <button type="submit" class="btn mb-4">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="sosmed col-md-4 col-lg-3 col-xl-  mb-4">
+              <h6 class="fw-bold mb-4">Social media</h6>
+              <div class="d-flex gap-3">
+                <a href="#"><img src="./assets/images/ig.png" alt=""></a>
+                <a href="#"><img src="./assets/images/twitter.png" alt=""></a>
+                <a href="#"><img src="./assets/images/email2.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-4 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+        <span> © 2023 Copyright:</span>
+        <a class="text-reset fw-bold text-white" href="https://mdbootstrap.com/">Andri Anggoro</a>
+      </div>
+    </footer>
+    <!-- Footer -->
+</body>
+</html>

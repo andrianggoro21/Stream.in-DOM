@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream.in - New Release</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/icon.png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+            crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+            crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@700&display=swap" 
+            rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">   
+</head>
+<body class="home-page">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xxl bg-black navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#"><img src="./assets/images/logo2.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./tv-shows.html">TV Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./movie.html">Movie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modalContactUs">Contact Us</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center align-items-center gap-5">
+            <form class="d-flex form justify-content-center align-items-center bg-dark" role="search">
+              <input class="form-control bg-dark me-2 text-white" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn-search" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+            <div class="btn-navbar d-flex justify-content-center align-items-center gap-4">
+              <a href="./signup.html"><button type="button" class="btn btn-outline-primary">Sign Up</button></a>
+              <a href="./signin.html"><button type="button" class="btn btn-primary">Sign In</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <!-- Breadcrumbs -->
+    <div class="body-breadcrumb">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb align-items-center">
+              <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">New Release</li>
+            </ol>
+          </nav>
+    </div>
+    <!-- Breadcrumbs -->
+
+    <div class="body-content">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- button genre -->
+      <nav class="navbar navbar-expand-xl navbar-dark select-genre">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#selectGenre" aria-controls="selectGenre" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="selectGenre">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+              <li class="nav-item select-genre-all">
+                <a class="nav-link" aria-current="page" href="#">All</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Action</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Adventure</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Comedy</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Drama</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Horror</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Sci-Fi</a>
+              </li>
+              <li class="nav-item select-genre-item">
+                <a class="nav-link" href="#">Thriller</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Button Genre -->
+       <div class="filter-sortby d-flex justify-content-center align-items-center gap-4">
+         <div class="sortby d-flex justify-content-center align-items-center">
+           <a class="d-flex gap-3 align-items-center" href="#">
+             <img src="./assets/images/sortby.png" alt="sortby">
+             <span>Sort by</span>
+             <img src="./assets/images/down.png" alt="down">
+           </a>
+         </div>
+         <div class="filter d-flex justify-content-center align-items-center">
+           <a class="d-flex gap-3 align-items-center" href="#">
+             <img src="./assets/images/filter.png" alt="filter">
+             <span>Filter by</span>
+             <img src="./assets/images/down.png" alt="down">
+           </a>
+         </div>
+       </div>
+     </div>
+     <!-- New Release -->
+     <div class="card-release">
+      <div class="card-content d-flex justify-content-between">
+        <span class="card-content-text">New Release</span>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-6 g-4 mb-4">
+        <div class="col body-card-content">
+          <div class="card">
+            <img src="./assets/images/img-release1.png" class="card-img-top" alt="img-release1">
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Antman">
+              <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="card-body card-content-title">
+              <h6 class="card-title">Ant-man & the Wasp: Quantumania</h6>
+              <h6 class="h6-genre">Action, Adventure, Fantasy</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col body-card-content">
+          <div class="card">
+            <img src="./assets/images/img-release2.png" class="card-img-top" alt="img-release2">
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Teenwolf">
+              <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="card-body card-content-title">
+              <h6 class="card-title">Teen Wolf: The Movie</h6>
+              <h6 class="h6-genre">Action, Drama, Fantasy</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col body-card-content">
+          <div class="card">
+            <img src="./assets/images/img-release3.png" class="card-img-top" alt="img-release3">
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Thelittlemermaid">
+              <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="card-body card-content-title">
+              <h6 class="card-title">The Little Mermaid</h6>
+              <h6 class="h6-genre">Drama, Fiction, Adventure</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col body-card-content">
+          <div class="card">
+            <img src="./assets/images/img-release4.png" class="card-img-top" alt="img-release4">
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Avatar">
+              <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="card-body card-content-title">
+              <h6 class="card-title">Avatar The Way of Water</h6>
+              <h6 class="h6-genre">Action, Adventure, Sci-Fi</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col body-card-content">
+          <div class="card">
+            <img src="./assets/images/img-release5.png" class="card-img-top" alt="img-release5">
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-Jurassicworld">
+              <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="card-body card-content-title">
+              <h6 class="card-title">Jurassic World</h6>
+              <h6 class="h6-genre">Action, Adventure, Fantasy</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col body-card-content">
+          <div class="card">
+            <img src="./assets/images/img-release6.png" class="card-img-top" alt="img-release6">
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-47meterdown">
+              <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="card-body card-content-title">
+              <h6 class="card-title">47 Meters Down</h6>
+              <h6 class="h6-genre">Thriller, Action, Adventure</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- New Release -->
+  </div>
+    <!-- Body Content Home -->
+    <!-- Modal Content Ant-man & The Was -->
+    <div class="modal fade" id="modal-Antman" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content detail-content">
+          <div class="modal-body detail-body">
+            <div class="row detail-row">
+              <div class="img-modal col-md d-flex justify-content-center">
+                <iframe width="580" height="360" src="https://www.youtube.com/embed/QbZqS2pvEmQ" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+              </div>
+              <div class="content-modal col-md">
+                <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                  <h3 class="detail-title">Ant-man & The Wasp: Quantumania</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="content-genre d-flex gap-3">
+                  <span>Action</span>
+                  <span>Adventure</span>
+                  <span>Comedy</span>
+                </div>
+                <div class="content-spec">
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2023</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2 Hours 4 Minutes</span>
+                  <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                  <span>6.4</span>
+                </div>
+                <div class="content-synopsis">
+                  <p>Scott Lang and Hope Van Dyne, along with Hank Pym and Janet Van Dyne, explore the Quantum Realm, 
+                  where they interact with strange creatures and embark on an adventure that goes beyond the limits of what they thought was possible.</p>
+                </div>
+                <div class="content-writers">
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Directors</span></div>
+                    <div class="column2 col-sm-9"><span>Peyton Reed</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Writers</span></div>
+                    <div class="column2  col-sm-9"><span>Jeff Loveness, Stan Lee, Larry Lieber</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Stars</span></div>
+                    <div class="column2  col-sm-9"><span>Paul Rudd, Evangeline Lilly, Michael Douglas</span></div>
+                  </div>
+                </div>
+                <div class="modal-watch row d-flex gap-4">
+                  <div class="col-sm-7 d-flex gap-3">
+                    <img src="./assets/images/img-modal-add.png" alt="">
+                    <img src="./assets/images/img-modal-love.png" alt="">
+                    <img src="./assets/images/img-modal-share.png" alt="">
+                  </div>
+                  <div class="btn-watch col-sm">
+                    <a href="./streaming.html">
+                      <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                        <img src="./assets/images/btn-watch.png" alt="">
+                        <span>Watch Now</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Content Ant-man & The Was -->
+    <!-- Modal Conten Teen Wolf: The Movie -->
+    <div class="modal fade" id="modal-Teenwolf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content detail-content">
+          <div class="modal-body detail-body">
+            <div class="row detail-row">
+              <div class="img-modal col-md d-flex justify-content-center">
+                <iframe width="580" height="360" src="https://www.youtube.com/embed/1y3rflTTjeI" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+              </div>
+              <div class="content-modal col-md">
+                <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                  <h3 class="detail-title">Teen Wolf: The Movie</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="content-genre d-flex gap-3">
+                  <span>Action</span>
+                  <span>Drama</span>
+                  <span>Fantasy</span>
+                </div>
+                <div class="content-spec">
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>18+</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2023</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2 Hours 20 Minutes</span>
+                  <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                  <span>5.6</span>
+                </div>
+                <div class="content-synopsis">
+                  <p>A terrifying evil has emerged. The wolves howl once again, but only a Werewolf like Scott McCall, 
+                  can gather both new allies and reunite trusted friends to fight back against what could be the most powerful and deadliest enemy.</p>
+                </div>
+                <div class="content-writers">
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Directors</span></div>
+                    <div class="column2 col-sm-9"><span>Russell Mulcahy</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Writers</span></div>
+                    <div class="column2  col-sm-9"><span>Jeff Davis, Will Wallace, Joseph P. Genier</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Stars</span></div>
+                    <div class="column2  col-sm-9"><span>Tyler Posey, Crystal Reed, Holland Roden</span></div>
+                  </div>
+                </div>
+                <div class="modal-watch row d-flex gap-4">
+                  <div class="col-sm-7 d-flex gap-3">
+                    <img src="./assets/images/img-modal-add.png" alt="">
+                    <img src="./assets/images/img-modal-love.png" alt="">
+                    <img src="./assets/images/img-modal-share.png" alt="">
+                  </div>
+                  <div class="btn-watch col-sm">
+                    <a href="./streaming.html">
+                      <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                        <img src="./assets/images/btn-watch.png" alt="">
+                        <span>Watch Now</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Conten Teen Wolf: The Movie -->
+    <!-- Modal Conten The Little Mermaid -->
+    <div class="modal fade" id="modal-Thelittlemermaid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content detail-content">
+          <div class="modal-body detail-body">
+            <div class="row detail-row">
+              <div class="img-modal col-md d-flex justify-content-center">
+                <iframe width="580" height="360" src="https://www.youtube.com/embed/kpGo2_d3oYE" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+              </div>
+              <div class="content-modal col-md">
+                <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                  <h3 class="detail-title">The Little Mermaid</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="content-genre d-flex gap-3">
+                  <span>Adventure</span>
+                  <span>Family</span>
+                  <span>Fantasy</span>
+                </div>
+                <div class="content-spec">
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2023</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2 Hours 20 Minutes</span>
+                  <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                  <span>5.6</span>
+                </div>
+                <div class="content-synopsis">
+                  <p>A young mermaid makes a deal with a sea witch to trade her beautiful voice for human legs so she can discover 
+                  the world above water and impress a prince.</p>
+                </div>
+                <div class="content-writers">
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Directors</span></div>
+                    <div class="column2 col-sm-9"><span>Rob Marshall</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Writers</span></div>
+                    <div class="column2  col-sm-9"><span>David Magee, Rob Marshall, John Deluca</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Stars</span></div>
+                    <div class="column2  col-sm-9"><span>Halle Bailey, Jonah Hauer-King, Melissa McCarthy</span></div>
+                  </div>
+                </div>
+                <div class="modal-watch row d-flex gap-4">
+                  <div class="col-sm-7 d-flex gap-3">
+                    <img src="./assets/images/img-modal-add.png" alt="">
+                    <img src="./assets/images/img-modal-love.png" alt="">
+                    <img src="./assets/images/img-modal-share.png" alt="">
+                  </div>
+                  <div class="btn-watch col-sm">
+                    <a href="./streaming.html">
+                      <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                        <img src="./assets/images/btn-watch.png" alt="">
+                        <span>Watch Now</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Conten The Little Mermaid -->
+    <!-- Modal Content Avatar -->
+    <div class="modal fade" id="modal-Avatar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content detail-content">
+          <div class="modal-body detail-body">
+            <div class="row detail-row">
+              <div class="img-modal col-md d-flex justify-content-center">
+                <iframe width="580" height="360" src="https://www.youtube.com/embed/o5F8MOz_IDw" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+              </div>
+              <div class="content-modal col-md">
+                <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                  <h3 class="detail-title">Avatar The Way of Water</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="content-genre d-flex gap-3">
+                  <span>Action</span>
+                  <span>Adventure</span>
+                  <span>Fantasy</span>
+                </div>
+                <div class="content-spec">
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2023</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>3 Hours 2 Minutes</span>
+                  <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                  <span>9.8</span>
+                </div>
+                <div class="content-synopsis">
+                  <p>Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. 
+                    Once a familiar threat returns to finish what was previously started, 
+                    Jake must work with Neytiri and the army of the Na'vi race to protect their home.</p>
+                </div>
+                <div class="content-writers">
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Directors</span></div>
+                    <div class="column2 col-sm-9"><span>James Cameron</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Writers</span></div>
+                    <div class="column2  col-sm-9"><span>James Cameron, Rick Jaffa, Amanda Silver</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Stars</span></div>
+                    <div class="column2  col-sm-9"><span>Sam Worthington, Sigourney Weaver, Zoe Saldana, Stephen Lang, Kate Winslet, Cliff Curtis</span></div>
+                  </div>
+                </div>
+                <div class="modal-watch row d-flex gap-4">
+                  <div class="col-sm-7 d-flex gap-3">
+                    <img src="./assets/images/img-modal-add.png" alt="">
+                    <img src="./assets/images/img-modal-love.png" alt="">
+                    <img src="./assets/images/img-modal-share.png" alt="">
+                  </div>
+                  <div class="btn-watch col-sm">
+                    <a href="./streaming.html">
+                      <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                        <img src="./assets/images/btn-watch.png" alt="">
+                        <span>Watch Now</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Content Avatar-->
+    <!-- Modal Content Jurassic World -->
+    <div class="modal fade" id="modal-Jurassicworld" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content detail-content">
+          <div class="modal-body detail-body">
+            <div class="row detail-row">
+              <div class="img-modal col-md d-flex justify-content-center">
+                <iframe width="580" height="360" src="https://www.youtube.com/embed/RFinNxS5KN4" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+              </div>
+              <div class="content-modal col-md">
+                <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                  <h3 class="detail-title">Jurassic World</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="content-genre d-flex gap-3">
+                  <span>Action</span>
+                  <span>Adventure</span>
+                  <span>Sci-Fi</span>
+                </div>
+                <div class="content-spec">
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2015</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2 Hours 4 Minutes</span>
+                  <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                  <span>6.9</span>
+                </div>
+                <div class="content-synopsis">
+                  <p>A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, 
+                  the Indominus Rex, which escapes containment and goes on a killing spree.</p>
+                </div>
+                <div class="content-writers">
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Directors</span></div>
+                    <div class="column2 col-sm-9"><span>Colin Trevorrow</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Writers</span></div>
+                    <div class="column2  col-sm-9"><span>Rick Jaffa, Amanda Silver, Colin Trevorrow</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Stars</span></div>
+                    <div class="column2  col-sm-9"><span>Chris Pratt, Bryce Dallas Howard, Ty Simpkins</span></div>
+                  </div>
+                </div>
+                <div class="modal-watch row d-flex gap-4">
+                  <div class="col-sm-7 d-flex gap-3">
+                    <img src="./assets/images/img-modal-add.png" alt="">
+                    <img src="./assets/images/img-modal-love.png" alt="">
+                    <img src="./assets/images/img-modal-share.png" alt="">
+                  </div>
+                  <div class="btn-watch col-sm">
+                    <a href="./streaming.html">
+                      <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                        <img src="./assets/images/btn-watch.png" alt="">
+                        <span>Watch Now</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Content Jurassic World -->
+    <!-- Modal Content 47 Meters Down -->
+    <div class="modal fade" id="modal-47meterdown" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content detail-content">
+          <div class="modal-body detail-body">
+            <div class="row detail-row">
+              <div class="img-modal col-md d-flex justify-content-center">
+                <iframe width="580" height="360" src="https://www.youtube.com/embed/ddYSGGJAKOk" title="YouTube video player" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+              </div>
+              <div class="content-modal col-md">
+                <div class="header-modal d-flex justify-content-between" data-bs-theme="dark">
+                  <h3 class="detail-title">47 Meters Down</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="content-genre d-flex gap-3">
+                  <span>Adventure</span>
+                  <span>Drama</span>
+                  <span>Horror</span>
+                </div>
+                <div class="content-spec">
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>+17</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>2017</span>
+                  <img src="./assets/images/titik.png" alt="point">
+                  <span>1 Hours 29 Minutes</span>
+                  <img class="modal-rating" src="./assets/images/rating.png" alt="rating">
+                  <span>5.6</span>
+                </div>
+                <div class="content-synopsis">
+                  <p>Two sisters vacationing in Mexico are trapped in a shark cage at the bottom of the ocean. 
+                  With less than an hour of oxygen left and great white sharks circling nearby, they must fight to survive.</p>
+                </div>
+                <div class="content-writers">
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Directors</span></div>
+                    <div class="column2 col-sm-9"><span>Johannes Roberts</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Writers</span></div>
+                    <div class="column2  col-sm-9"><span>Johannes Roberts, Ernest Riera</span></div>
+                  </div>
+                  <div class="row detail-row">
+                    <div class="column1 col-sm-3"><span>Stars</span></div>
+                    <div class="column2  col-sm-9"><span>Mandy Moore, Claire Holt, Matthew Modine</span></div>
+                  </div>
+                </div>
+                <div class="modal-watch row d-flex gap-4">
+                  <div class="col-sm-7 d-flex gap-3">
+                    <img src="./assets/images/img-modal-add.png" alt="">
+                    <img src="./assets/images/img-modal-love.png" alt="">
+                    <img src="./assets/images/img-modal-share.png" alt="">
+                  </div>
+                  <div class="btn-watch col-sm">
+                    <a href="./streaming.html">
+                      <button type="button" class="btn btn-primary d-flex justify-content-center align-items-center gap-2 btn-watch-now">
+                        <img src="./assets/images/btn-watch.png" alt="">
+                        <span>Watch Now</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Content 47 Meters Down -->
+    <!-- Modal Contact Us -->
+    <div class="modal fade" id="modalContactUs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog contact-dialog modal-lg">
+        <div class="modal-content contact-content">
+          <div class="modal-header contact-header" data-bs-theme="dark">
+            <h1 class="modal-title contact-title fs-5" id="exampleModalLabel">Contact Us</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body contact-body">
+            <div class="modal-quote">
+              <p>Our friendly team would love to hear from you!</p>
+            </div>
+            <div class="row">
+              <div class="col-md">
+                <div class="mb-3 contact-data">
+                  <label for="exampleFormControlInput1" class="form-label contact-label">First Name</label>
+                  <input type="text" class="form-control contact-input" id="exampleFormControlInput1" placeholder="First Name">
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="mb-3 contact-data">
+                  <label for="exampleFormControlInput1" class="form-label contact-label">Last Name</label>
+                  <input type="text" class="form-control contact-input" id="exampleFormControlInput1" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 contact-data">
+              <label for="exampleFormControlInput1" class="form-label contact-label">Email Address</label>
+              <input type="email" class="form-control contact-input" id="exampleFormControlInput1" placeholder="Email Address">
+            </div>
+            <div class="mb-3 contact-data">
+              <label for="exampleFormControlInput1" class="form-label contact-label">Subject</label>
+              <input type="test" class="form-control contact-input" id="exampleFormControlInput1" placeholder="Subject">
+            </div>
+            <div class="mb-3 contact-data">
+              <label for="exampleFormControlTextarea1" class="form-label contact-label">Message</label>
+              <textarea class="form-control contact-textArea" id="exampleFormControlTextarea1" rows="6" placeholder="Enter Your Message"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer contact-footer" >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+            <button type="button" class="btn btn-primary">Send Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Contact Us -->
+        
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-black text-muted">
+      <div class="body-footer">
+        <div class="container-fluid text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="footer-content col-md-3 col-lg-4 col-xl-3 mb-4">
+              <h6 class="fw-bold mb-4"><img src="./assets/images/logo2.png" alt=""></h6>
+              <p>Streaming movie with best <br> experience.</p>
+            </div>
+            <div class="menu-footer col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="fw-bold mb-4 text-white">Menu</h6>
+              <p><a href="#!" class="text-white">TV Shows</a></p>
+              <p><a href="#!" class="text-white">Movie</a></p>
+              <p><a href="#!" class="text-white">MyList</a></p>
+              <p><a href="#!" class="text-white">Contact</a></p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <form action="">
+                <div class="row">
+                  <div class="title-subscribe col-auto mb-4 mb-md-0">
+                    <h6>Join our newsletter</h6>
+                    <p class="pt-2">We’ll send you our schedule and more informations about movie.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5 col-12 mb-4">
+                    <div class="form-outline">
+                      <input type="email" id="form5Example25" class="form-control "/>
+                    </div>
+                  </div>
+                  <div class=" btn-subscribe col-auto mb-4">
+                    <button type="submit" class="btn mb-4">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="sosmed col-md-4 col-lg-3 col-xl-  mb-4">
+              <h6 class="fw-bold mb-4">Social media</h6>
+              <div class="d-flex gap-3">
+                <a href="#"><img src="./assets/images/ig.png" alt=""></a>
+                <a href="#"><img src="./assets/images/twitter.png" alt=""></a>
+                <a href="#"><img src="./assets/images/email2.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-4 text-white" style="background-color: rgba(0, 0, 0, 0.05);">
+        <span> © 2023 Copyright:</span>
+        <a class="text-reset fw-bold text-white" href="https://mdbootstrap.com/">Andri Anggoro</a>
+      </div>
+    </footer>
+    <!-- Footer -->
+</body>
+</html>
